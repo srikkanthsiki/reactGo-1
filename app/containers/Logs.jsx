@@ -1,6 +1,5 @@
-import React from 'react';
-import '../css/components/Logs.css';
-import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import React, { Component } from 'react';
+import BootstrapTable from 'react-bootstrap-table-next';
 
 var products = [{
     id: 1,
@@ -11,27 +10,36 @@ var products = [{
     name: "Product2",
     price: 80
 },{
-    id: 1,
+    id: 3,
     name: "Product1",
     price: 120
 }, {
-    id: 2,
+    id: 4,
     name: "sds",
     price: 80
 }];
-class AccessList extends React.Component{
+
+const columns = [{
+    dataField: 'id',
+    text: 'Product ID'
+}, {
+    dataField: 'name',
+    text: 'Product Name'
+}, {
+    dataField: 'price',
+    text: 'Product Price'
+}];
+
+class AccessList extends Component{
     constructor(props) {
         super(props);
 
     }
     render() {
         return (
-            <div>
-                <BootstrapTable data={ products } striped hover condensed>
-                    <TableHeaderColumn dataField='id' isKey>Product ID</TableHeaderColumn>
-                    <TableHeaderColumn dataField='name'>Product Name</TableHeaderColumn>
-                    <TableHeaderColumn dataField='price'>Product Price</TableHeaderColumn>
-                </BootstrapTable>
+            <div >
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"></link>
+                <BootstrapTable keyField='id' data={ products } columns={ columns } />
             </div>
         );
     }

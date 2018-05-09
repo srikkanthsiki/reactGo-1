@@ -1,34 +1,10 @@
-import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
-import BootstrapTable from 'react-bootstrap-table-next';
+import React from 'react';
 
-var products = [{
-    id: 1,
-    name: "Product1",
-    price: 120
-}, {
-    id: 2,
-    name: "Product2",
-    price: 80
-},{
-    id: 1,
-    name: "Product1",
-    price: 120
-}, {
-    id: 2,
-    name: "sds",
-    price: 80
-}];
+/*
+ * Note: This is kept as a container-level component,
+ *  i.e. We should keep this as the container that does the data-fetching
+ *  and dispatching of actions if you decide to have any sub-components.
+ */
+const Dashboard = () => <div>Welcome to the Dasboard. Stay tuned...</div>;
 
-const columns = [{
-    dataField: 'id',
-    text: 'Product ID'
-}, {
-    dataField: 'name',
-    text: 'Product Name'
-}, {
-    dataField: 'price',
-    text: 'Product Price'
-}];
-
-export default () =>
-    <BootstrapTable keyField='id' data={ products } columns={ columns } />
+export default Dashboard;

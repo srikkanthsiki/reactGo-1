@@ -12,10 +12,10 @@ const cx = classNames.bind(styles);
 const About = () => {
   return (
     <div className={cx('about')}>
-      <h1 className={cx('header')}>hell world</h1>
+      <h1 className={cx('header')}>Prism</h1>
       <div className={cx('description')}>
-        <p>Imagine an ocean of ninjas. Now think of it as a metaphor.<br />
-          Seriously, we love good tech. React, redux, scala, Haskell, machine learning, you name it!
+        <p>Icloud Build Automation tool.<br />
+         Our Goal is  to bring up partition, kick Hosts and Break Fix hosts faster and efficient
         </p>
       </div>
       <div className={cx('contribute')}>
